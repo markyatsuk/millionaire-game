@@ -61,8 +61,6 @@ h6 {
 .game-start {
   background-image: linear-gradient(to top left, #FFF3EB 50%, #FFFFFF 50%);
   height: 100vh;
-  padding-top: 80px;
-  padding-bottom: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
