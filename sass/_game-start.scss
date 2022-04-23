@@ -8,12 +8,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @media screen and (min-width: 768px) {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    @media screen and (min-width: 1440px) {
-
+    transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+    &.is-hidden{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        clip: rect(0 0 0 0);
     }
 }
 
@@ -65,6 +69,9 @@
     line-height: 116%;
     color: #FFFFFF;
     display: block;
+    &:active{
+        background-color: $pressedButtonColor;
+    }
     // align-self: flex-end;
     @media screen and (min-width: 768px) and (max-width: 1439px) {
         width: 390px;
@@ -75,6 +82,12 @@
         border-radius: 12px;
         padding: 21px 24px 20px 24px;
         font-size: 20px;
+        &:hover{
+            background-color: $hoverButtonColor;
+        }
+        &:active{
+            background-color: $pressedButtonColor;
+        }
     }
 }
 
@@ -86,5 +99,4 @@
         align-items: flex-start;
         margin-left: 32px;
     }
-    
 }
