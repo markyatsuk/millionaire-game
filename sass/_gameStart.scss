@@ -1,7 +1,92 @@
+.game-start{
+    background-image: linear-gradient(to top left,
+    #FFF3EB 50%,
+    #FFFFFF 50%,
+    );
+    
+    height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 768px) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    @media screen and (min-width: 1440px) {
+
+    }
+}
+
+.container--flex{
+    @media screen and (min-width: 1440px) {
+        display: flex;
+    }
+}
+
+.team-img__item{
+    margin-bottom: 24px;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 34px;
+    }
+    @media screen and (min-width: 1440px) {
+        margin-bottom: 0;
+    }
+}
+
 .title{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
     line-height: 116%;
+    text-align: center;
+    margin-bottom: 102px;
+    color: #1C1C21;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 50px;
+    }
+    @media screen and (min-width: 1440px) {
+        font-size: 56px;
+        text-align: start;
+        margin-bottom: 64px;
+    }
+}
+
+.start-button{
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: $mainOrangeColor;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 116%;
+    color: #FFFFFF;
+    display: block;
+    // align-self: flex-end;
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+        width: 390px;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 1440px) {
+        width: 296px;
+        border-radius: 12px;
+        padding: 21px 24px 20px 24px;
+        font-size: 20px;
+    }
+}
+
+.desktop-right-block{
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: flex-start;
+        margin-left: 32px;
+    }
+    
 }
