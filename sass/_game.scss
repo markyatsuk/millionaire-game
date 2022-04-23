@@ -45,6 +45,10 @@
 .answers{
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 768px){
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .answer-button{
@@ -74,13 +78,14 @@
     line-height: 116%;
     color: $answerColor;
     position: relative;
-    width: 100%;
+    width: 288px;
     height: 56px;
-    border: 1px solid $innactiveBorderColor;
-    border-radius: 5px;
     & + &{
         margin-top: 8px;
     }
+    background-image: url(../images/Rectangle1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     &::before{
         content: "";
         position: absolute;
@@ -98,5 +103,11 @@
         right: -px;
         top: calc(50% - 0px/2);
         background-color: $innactiveBorderColor;
+    }
+    @media screen and (min-width: 768px){
+        width: 389px;
+        background-image: url(../images/Rectangle1_desktop_.png);
+        background-size: cover;
+        height: 72px;
     }
 }

@@ -1,0 +1,144 @@
+.game-desktop{
+    background-color: $gameBackgroundColor;
+    &.is-hidden{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        clip: rect(0 0 0 0);
+    }
+}
+
+.container--desktop-game-flex{
+    display: flex;
+    flex-direction: row;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.game-left-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 376px);
+    padding-top: 133px;
+    padding-bottom: 122px;
+}
+
+.game-right-section{
+    width: 376px;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop-question{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 116%;
+    color: $titleColor;
+}
+
+
+
+.desktop-answers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.desktop-answer__item{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 116%;
+    color: $answerColor;
+    position: relative;
+    width: 389px;
+    height: 72px;
+    background-image: url(../images/Rectangle1_desktop_.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 17px;
+        height: 1px;
+        left: -17px;
+        top: calc(50% - 0px/2);
+        background-color: $innactiveBorderColor;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 17px;
+        height: 1px;
+        right: -17px;
+        top: calc(50% - 0px/2);
+        background-color: $innactiveBorderColor;
+    }
+    &:not(:nth-child(2n)){
+        margin-right: 34px;
+    }
+
+    &:not(:nth-child(2)){
+        margin-bottom: 32px;
+    }
+}
+
+.desktop-prize__item{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 116%;
+    color: $answerColor;
+    width: 240px;
+    padding: 8px 24px 9px 24px;
+    background-image: url(../images/Rectangle2_desktop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 69px;
+        height: 1px;
+        left: -69px;
+        top: calc(50% - 0px/2);
+        background-color: $innactiveBorderColor;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 69px;
+        height: 1px;
+        right: -69px;
+        top: calc(50% - 0px/2);
+        background-color: $innactiveBorderColor;
+    }
+    & + &{
+        margin-top: 8px;
+    }
+}
+
+.desktop-answer__leter{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 116%;
+    color: $mainOrangeColor;
+    margin-right: 8px;
+}

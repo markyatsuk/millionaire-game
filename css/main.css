@@ -226,6 +226,13 @@ h6 {
   flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+  .answers {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .answer-button {
   width: inherit;
   height: inherit;
@@ -253,10 +260,11 @@ h6 {
   line-height: 116%;
   color: #1C1C21;
   position: relative;
-  width: 100%;
+  width: 288px;
   height: 56px;
-  border: 1px solid #D0D0D8;
-  border-radius: 5px;
+  background-image: url(../images/Rectangle1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .answer__item + .answer__item {
@@ -283,8 +291,20 @@ h6 {
   background-color: #D0D0D8;
 }
 
+@media screen and (min-width: 768px) {
+  .answer__item {
+    width: 389px;
+    background-image: url(../images/Rectangle1_desktop_.png);
+    background-size: cover;
+    height: 72px;
+  }
+}
+
 .menu-section {
   transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+  height: 100vh;
+  padding: 32px 0;
+  background-color: #F5F5F7;
 }
 
 .menu-section.is-hidden {
@@ -306,6 +326,19 @@ h6 {
 
 .prizes {
   align-self: flex-end;
+  margin-top: 32px;
+}
+
+.menu-close-btn {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .prize__item {
@@ -317,11 +350,13 @@ h6 {
   color: #1C1C21;
   width: 240px;
   padding: 8px 24px;
-  border-radius: 5px;
   background-image: url(../images/Rectangle2.png);
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
 }
 
 .prize__item::before {
@@ -342,5 +377,253 @@ h6 {
   right: -41px;
   top: calc(50% - 0px/2);
   background-color: #D0D0D8;
+}
+
+.prize__item + .prize__item {
+  margin-top: 8px;
+}
+
+.game-desktop {
+  background-color: #F5F5F7;
+}
+
+.game-desktop.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.container--desktop-game-flex {
+  display: flex;
+  flex-direction: row;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.game-left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(100% - 376px);
+  padding-top: 133px;
+  padding-bottom: 122px;
+}
+
+.game-right-section {
+  width: 376px;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop-question {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 116%;
+  color: #1C1C21;
+}
+
+.desktop-answers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.desktop-answer__item {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 116%;
+  color: #1C1C21;
+  position: relative;
+  width: 389px;
+  height: 72px;
+  background-image: url(../images/Rectangle1_desktop_.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desktop-answer__item::before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 1px;
+  left: -17px;
+  top: calc(50% - 0px/2);
+  background-color: #D0D0D8;
+}
+
+.desktop-answer__item::after {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 1px;
+  right: -17px;
+  top: calc(50% - 0px/2);
+  background-color: #D0D0D8;
+}
+
+.desktop-answer__item:not(:nth-child(2n)) {
+  margin-right: 34px;
+}
+
+.desktop-answer__item:not(:nth-child(2)) {
+  margin-bottom: 32px;
+}
+
+.desktop-prize__item {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 116%;
+  color: #1C1C21;
+  width: 240px;
+  padding: 8px 24px 9px 24px;
+  background-image: url(../images/Rectangle2_desktop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+}
+
+.desktop-prize__item::before {
+  content: "";
+  position: absolute;
+  width: 69px;
+  height: 1px;
+  left: -69px;
+  top: calc(50% - 0px/2);
+  background-color: #D0D0D8;
+}
+
+.desktop-prize__item::after {
+  content: "";
+  position: absolute;
+  width: 69px;
+  height: 1px;
+  right: -69px;
+  top: calc(50% - 0px/2);
+  background-color: #D0D0D8;
+}
+
+.desktop-prize__item + .desktop-prize__item {
+  margin-top: 8px;
+}
+
+.desktop-answer__leter {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 116%;
+  color: #FF8B37;
+  margin-right: 8px;
+}
+
+.game-end {
+  background-color: #F5F5F7;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-end.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.paragraf-end {
+  color: #D0D0D8;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.end-button {
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background-color: #FF8B37;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 116%;
+  color: #FFFFFF;
+  display: block;
+}
+
+.end-button:active {
+  background-color: #E87928;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .end-button {
+    width: 390px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .end-button {
+    width: 296px;
+    border-radius: 12px;
+    padding: 21px 24px 20px 24px;
+    font-size: 20px;
+  }
+  .end-button:hover {
+    background-color: #FFAC70;
+  }
+  .end-button:active {
+    background-color: #E87928;
+  }
+}
+
+.paragraf-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 54px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 116%;
+  color: #1C1C21;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .paragraf-end {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .paragraf-end {
+    font-size: 32px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

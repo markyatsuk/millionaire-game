@@ -1,0 +1,81 @@
+.game-end{
+   background-color: $gameBackgroundColor ;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   &.is-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+   }
+}
+
+.paragraf-end{
+    color: $innactiveBorderColor;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+
+}
+.end-button{
+    width: 100%;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: $mainOrangeColor;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 116%;
+    color: #FFFFFF;
+    display: block;
+    &:active{
+        background-color: $pressedButtonColor;
+    }
+    // align-self: flex-end;
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+        width: 390px;
+        margin: 0 auto;
+    }
+    @media screen and (min-width: 1440px) {
+        width: 296px;
+        border-radius: 12px;
+        padding: 21px 24px 20px 24px;
+        font-size: 20px;
+        &:hover{
+            background-color: $hoverButtonColor;
+        }
+        &:active{
+            background-color: $pressedButtonColor;
+        }
+    }
+}
+.paragraf-end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 54px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 116%;
+    color: $titleColor;
+    opacity: 0.5;
+    margin-bottom: 8px;
+    @media screen and (min-width: 768px){
+        font-size: 20px;
+
+    }
+    @media screen and (min-width: 1440px){
+        font-size: 32px;
+
+    }
+}

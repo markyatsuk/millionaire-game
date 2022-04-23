@@ -28,7 +28,7 @@
 
     <section class="game-section is-hidden">
         <div class="container container--game-flex">
-            <button class="menu-open-btn">
+            <button type ="button" class="menu-open-btn">
                 <svg class="icon-menu" width="16px" height="14px">
                     <use  href="./images/symbol-defs.svg#icon-menu">
                 </svg>
@@ -36,7 +36,7 @@
             <h3 class="question">How old your elder brother was 10 years before you was born, mate?</h3>
             <ul class="answers">
                     <li class="answer__item">
-                        <button type="submit" class="answer-button">
+                        <button type="submit" class="answer-button to-end-game">
                         <span class="answer__leter">A</span>
                         10 years
                     </button>
@@ -65,7 +65,7 @@
 
     <section class="menu-section is-hidden">
         <div class="container container--menu-flex">
-            <button class="menu-open-btn">
+            <button class="menu-close-btn">
                 <svg class="icon-cross" width="24px" height="24px">
                     <use href="./images/symbol-defs.svg#icon-cross"/>
                 </svg>
@@ -86,6 +86,72 @@
             </ul>
         </div>
     </section>
+
+    <section class="game-desktop is-hidden">
+        <div class="container container--desktop-game-flex">
+            <div class="game-left-section">
+                <h3 class="desktop-question">How old your elder brother was 10 years <br> before you was born, mate?</h3>
+                <ul class="desktop-answers">
+                    <li class="desktop-answer__item">
+                        <button type="submit" class="answer-button to-end-game-desktop">
+                        <span class="desktop-answer__leter">A</span>
+                        10 years
+                    </button>
+                </li>
+                    <li class="desktop-answer__item">
+                        <button type="submit" class="answer-button">
+                        <span class="desktop-answer__leter">B</span>
+                        11 years
+                    </button>
+                </li>
+                    <li class="desktop-answer__item">
+                        <button type="submit" class="answer-button">
+                        <span class="desktop-answer__leter">C</span>
+                        12 years
+                    </button>
+                </li>
+                    <li class="desktop-answer__item">
+                        <button type="submit" class="answer-button">
+                        <span class="desktop-answer__leter">D</span>
+                        14 years
+                    </button>
+                </li>
+            </ul>
+            </div>
+            <div class="game-right-section">
+                <ul class="desktop-prizes">
+                    <li class="desktop-prize__item">$1,000,000</li>
+                    <li class="desktop-prize__item">$500,000</li>
+                    <li class="desktop-prize__item">$250,000</li>
+                    <li class="desktop-prize__item">$125,000</li>
+                    <li class="desktop-prize__item">$64,000</li>
+                    <li class="desktop-prize__item">$32,000</li>
+                    <li class="desktop-prize__item">$16,000</li>
+                    <li class="desktop-prize__item">$8,000</li>
+                    <li class="desktop-prize__item">$4,000</li>
+                    <li class="desktop-prize__item">$2,000</li>
+                    <li class="desktop-prize__item">$1,000</li>
+                    <li class="desktop-prize__item">$500</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="game-end is-hidden">
+        <div class="container container--flex">
+            <picture>
+                <source srcset="./images/hand_desktop_1x.png 1x , ./images/hand_desktop_2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="./images/hand_mobile_1x.png 1x , ./images/hand_mobile_2x.png 2x" media="(min-width: 768px)">
+                <source srcset="./images/hand_mobile_1x.png 1x , ./images/hand_mobile_2x.png 2x" media="(min-width: 320px)">
+                <img src="./images/hand_desktop_1x.png" alt="" class="team-img__item">
+            </picture>
+            <div class="desktop-right-block">
+                <p class="paragraf-end">Total score:</p>
+                <h2 class="title">$8,000 earned</h2>
+                <button type="button" class="end-button" end-btn>Try again</button>
+            </div>
+        </div>
+    </section>
+
     <script src="./index.js"></script>
 </body>
 </html>
